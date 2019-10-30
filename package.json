@@ -4,8 +4,8 @@
   "description": "Final Project",
   "main": "index.js",
   "scripts": {
-     "start": "node server", 
-     "server": "nodemon"
+    "start": "node server",
+    "server": "nodemon"
   },
   "repository": {
     "type": "git",
