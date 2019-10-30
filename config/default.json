@@ -1,0 +1,7 @@
+// The value below would normally be confidential.
+// This file would normally be added to .gitignore,
+// but has been comitted to Github to demonstrate how it would be used.
+
+{
+  "jwtToken": "mysecrettoken"
+}
