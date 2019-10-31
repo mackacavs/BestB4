@@ -6,9 +6,11 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json({ extended: false }))
 
-app.listen(PORT, () => console.log('Server has started'));
+server = app.listen(PORT, () => console.log('Server has started'));
 
-app.get('/',(req, res) => res.send('Hello'));
+app.post('/', (req, res) => {
+
+});
 
 mongoose.connect('mongodb://localhost/bestB4', {
   useNewUrlParser: true,
@@ -23,3 +25,5 @@ app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/login', require('./routes/api/login'));
+
+module.exports = server
