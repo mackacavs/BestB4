@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const config = require('config')
 const { check, validationResult } = require('express-validator/check')
 const bcrypt = require('bcryptjs');
+const express = require('express');
+const router = express.Router();
 
 
 router.post('/', [
@@ -50,4 +52,6 @@ router.post('/', [
     console.error(err.message)
     res.status(500).send('Server Error')
   }
-})
+});
+
+module.exports =router;
