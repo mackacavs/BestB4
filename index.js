@@ -22,3 +22,4 @@ mongoose.connect('mongodb://localhost/bestB4', {
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/posts', require('./routes/api/posts'));
+app.use('/api/login', require('./routes/api/login'));
