@@ -13,6 +13,14 @@
 
 ### Installation
 
+```bash
+npm install
+```
+
 #### Tests
 
 ### How to use
+
+```bash
+npm run server
+```
