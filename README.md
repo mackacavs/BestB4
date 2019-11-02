@@ -1,11 +1,11 @@
 # BestB4
 
-( <br>
-       ) <br>
-  __..---..__ <br>
-,-='  /  |  \  `=-. <br>
-:--..___________..--; <br>
-\.,_____________,./ <br>
+          ( <br>
+                 ) <br>
+            __..---..__ <br>
+          ,-='  /  |  \  `=-. <br>
+          :--..___________..--; <br>
+          \.,_____________,./ <br>
 
 ### Motivation
 
@@ -13,7 +13,15 @@
 
 ### Screenshots
 
-### Tech stack and Framework
+### Tech Stack
+
+Mongo <br>
+Express <br>
+React <br>
+Node <br>
+
+Cypress <br>
+Insomnia (https://insomnia.rest/) <br>
 
 ### Features (what makes it stand out)
 
