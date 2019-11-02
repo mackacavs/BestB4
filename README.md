@@ -1,11 +1,13 @@
 # BestB4
 
-          ( <br>
-                 ) <br>
-            __..---..__ <br>
-          ,-='  /  |  \  `=-. <br>
-          :--..___________..--; <br>
-          \.,_____________,./ <br>
+                  (
+                   )
+              __..---..__
+          ,-='  /  |  \  `=-.,
+          :--..___________..--;
+           \.,_____________,./
+
+### Project Description
 
 ### Motivation
 
@@ -22,6 +24,7 @@ Node <br>
 
 Cypress <br>
 Insomnia (https://insomnia.rest/) <br>
+Travis CI <br>
 
 ### Features (what makes it stand out)
 
