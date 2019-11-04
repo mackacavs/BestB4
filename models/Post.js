@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const postSchema = new Schema ({
+const postSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
@@ -15,6 +15,10 @@ const postSchema = new Schema ({
         required: true
     },
     name: {
+        type: String,
+        required: true
+    },
+    postcode: {
         type: String,
         required: true
     },

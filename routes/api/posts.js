@@ -2,44 +2,59 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const auth = require('../../middleware/auth');
-const post = require('../../models/Post')
+const Post = require('../../models/Post')
 
 router.post('/', [auth, [
   check('description', 'Description is required')
-  .not()
-  .isEmpty(),
+    .not()
+    .isEmpty(),
   check('expiry', 'Expiry is required')
-  .not()
-  .isEmpty()
+    .not()
+    .isEmpty()
 ]
 ],
-async (req, res) => {
-  const errors = validationResult(req)
-  if (!errors.isEmpty()) {
-    return res.status(400).json({errors: errors.array() })
+  async (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+    try {
+      const user = await User.findById(req.user.id).select('-password')
+      console.log(user)
+      const newPost = new Post({
+        description: req.body.description,
+        expiry: req.body.expiry,
+        name: user.name,
+        postcode: user.postcode,
+        avatar: user.avatar,
+        user: req.user.id
+      });
+      const post = await newPost.save()
+      console.log(post)
+      res.json(post)
+    } catch (err) {
+      console.log(err.message)
+      res.status(500).send('Server Error')
+    }
   }
-  try {
-    const user = await User.findById(req.user.id).select('-password')
-
-  const newPost = new Post({
-    description: req.body.description,
-    expiry: req.body.expiry,
-    name: user.name,
-    avatar: user.avatar,
-    user: req.user.id
-  });
-  const post = await newPost.save()
-  res.json(post)
-} catch (err) {
-  console.log(err.message)
-  res.status(500).send('Server Error')
-  }
- }
 )
 
 router.get('/', auth, async (req, res) => {
   try {
-    const posts = await Post.find().sort({ date: -1 })
+    currentUser = req.user.id
+
+    const posts = await Post.find({ user: { $ne: currentUser } }).sort({ date: -1 })
+    res.json(posts)
+  } catch (err) {
+    console.log(err.message)
+    res.status(500).send("server error")
+  }
+})
+
+router.get('/currentuser', auth, async (req, res) => {
+  try {
+    console.log(req.user)
+    const posts = await Post.find({ user: req.user.id }).sort({ date: -1 })
     res.json(posts)
   } catch (err) {
     console.log(err.message)
