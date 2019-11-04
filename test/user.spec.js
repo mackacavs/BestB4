@@ -11,6 +11,7 @@ describe('User is registered', () => {
   //     useFindAndModify: false
   //   })
   // });
+
   test('should create a new user', (done) => {
     request(app).post('/api/users')
     .send({
@@ -21,6 +22,20 @@ describe('User is registered', () => {
     })
     .then((response) => {
       expect(response.statusCode).toBe(200);
+      done();
+    });
+  });
+
+  test('user is automatically logged in upon first registration', (done) => {
+    request(app).post('/api/users')
+    .send({
+      name: "Testname2",
+      email: "email13@email.com",
+      postcode: "NW1 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      expect(response.body.token).not.toBe(undefined);
       done();
     });
   });
