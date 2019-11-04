@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
-    "pretest": "cross-env NODE_ENV=test"
+    "test": "NODE_ENV= jest"
   },
   "repository": {
     "type": "git",
@@ -29,18 +28,17 @@
     "mongoose": "^5.7.7",
     "request": "^2.88.0"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ]
-  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "concurrently": "^5.0.0",
-    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
-    "jst": "0.0.13",
     "nodemon": "^1.19.4",
+    "superagent": "^5.1.0",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
+
