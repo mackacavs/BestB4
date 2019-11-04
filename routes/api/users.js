@@ -7,7 +7,6 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-
 router.post('/', [
   check('name', 'Name is required').not().isEmpty(),
   check('email', 'Please include a valid email').isEmail(),
@@ -18,7 +17,7 @@ router.post('/', [
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { name, email, password } = req.body
+    const { name, email, password, postcode } = req.body
     try {
       let user = await User.findOne({ email: email })
       if (user) {
@@ -29,6 +28,7 @@ router.post('/', [
         name,
         email,
         password,
+        postcode,
         avatar
       })
       const salt = await bcrypt.genSalt(10);
@@ -52,7 +52,6 @@ router.post('/', [
       )
 
     } catch (err) {
-
       res.status(500).send('Server Error')
     }
 

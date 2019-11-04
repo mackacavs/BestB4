@@ -16,11 +16,10 @@ describe('User is registered', () => {
       .send({
         name: "Testname",
         email: "email12@email.com",
+        postcode: "NW5 1SD",
         password: "123456"
       })
       .then((response) => {
-        console.log(response.statusCode)
-        console.log("I'm here")
         expect(response.statusCode).toBe(200);
         done();
       });
