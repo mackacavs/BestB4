@@ -9,7 +9,7 @@ app.use(express.json({ extended: false }))
 
 app.get('/', (req, res) => res.send('Hello'));
 
-if (process.env.NODE_ENV = 'test') {
+if (process.env.NODE_ENV === 'test') {
   mongoose.connect('mongodb://localhost/testDatabase', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -35,4 +35,3 @@ module.exports = app
   // .then(() => {
   // console.log("We have connected")
   // })
-
