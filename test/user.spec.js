@@ -25,6 +25,19 @@ describe('User is registered', () => {
       });
   });
 
+  test('should return an error if new user fails to enter a password', (done) => {
+   request(app).post('/api/users')
+     .send({
+       name: "Testname",
+       email: "email12@email.com",
+       postcode: "NW5 1SD",
+     })
+     .then((response) => {
+       expect(response.error.text.includes("Please enter a password with 6 or more characters")).toBe(true)
+       done();
+     });
+ });
+
   afterAll((done) => {
     mongoose.connection.db.dropDatabase(done);
     mongoose.connection.close()
