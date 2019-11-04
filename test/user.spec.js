@@ -13,30 +13,54 @@ describe('User is registered', () => {
   // });
   test('should create a new user', (done) => {
     request(app).post('/api/users')
-      .send({
-        name: "Testname",
-        email: "email12@email.com",
-        postcode: "NW5 1SD",
-        password: "123456"
-      })
-      .then((response) => {
-        expect(response.statusCode).toBe(200);
-        done();
-      });
+    .send({
+      name: "Testname",
+      email: "email12@email.com",
+      postcode: "NW5 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      expect(response.statusCode).toBe(200);
+      done();
+    });
   });
 
   test('should return an error if new user fails to enter a password', (done) => {
-   request(app).post('/api/users')
-     .send({
-       name: "Testname",
-       email: "email12@email.com",
-       postcode: "NW5 1SD",
-     })
-     .then((response) => {
-       expect(response.error.text.includes("Please enter a password with 6 or more characters")).toBe(true)
-       done();
-     });
- });
+    request(app).post('/api/users')
+    .send({
+      name: "Testname",
+      email: "email12@email.com",
+      postcode: "NW5 1SD",
+    })
+    .then((response) => {
+      expect(response.error.text.includes("Please enter a password with 6 or more characters")).toBe(true)
+      done();
+    });
+  });
+
+  test('should return an error if user attempts to register twice with same email', (done) => {
+    request(app).post('/api/users')
+    .send({
+      name: "Testname",
+      email: "email12@email.com",
+      postcode: "NW5 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      done();
+    });
+    request(app).post('/api/users')
+    .send({
+      name: "Testname",
+      email: "email12@email.com",
+      postcode: "NW5 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      expect(response.error.text.includes('User already exists')).toBe(true)
+      done();
+    });
+  });
 
   afterAll((done) => {
     mongoose.connection.db.dropDatabase(done);
