@@ -25,7 +25,20 @@ describe('User is registered', () => {
     });
   });
 
-  test('should return an error if new user fails to enter a password', (done) => {
+  test('should return an error if new user fails to enter a name', (done) => {
+    request(app).post('/api/users')
+    .send({
+      email: "email12@email.com",
+      postcode: "NW5 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      expect(response.error.text.includes('Name is required')).toBe(true)
+      done();
+    });
+  });
+
+test('should return an error if new user fails to enter a password', (done) => {
     request(app).post('/api/users')
     .send({
       name: "Testname",
