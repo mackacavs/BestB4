@@ -17,7 +17,6 @@ describe('User is registered', () => {
       .send({
         name: "Testname",
         email: "email12@email.com",
-        // postcode: "HA1 2RZ",
         password: "123456"
       })
       .then((response) => {
@@ -29,6 +28,8 @@ describe('User is registered', () => {
   });
 
   afterAll((done) => {
+    mongoose.connection.db.dropDatabase(done);
     mongoose.connection.close()
+
   });
 });

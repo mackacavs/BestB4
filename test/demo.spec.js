@@ -22,6 +22,9 @@ describe('Test the root path', () => {
   });
 
   afterAll((done) => {
+    mongoose.connection.db.dropDatabase(done);
     mongoose.connection.close()
+
+
   });
 });
