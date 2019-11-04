@@ -38,6 +38,20 @@ describe('User is registered', () => {
     });
   });
 
+  test('should return an error if new user fails to enter a valid email', (done) => {
+    request(app).post('/api/users')
+    .send({
+      name: "Testname",
+      email: "blah",
+      postcode: "NW5 1SD",
+      password: "123456"
+    })
+    .then((response) => {
+      expect(response.error.text.includes('Please include a valid email')).toBe(true)
+      done();
+    });
+  });
+
 test('should return an error if new user fails to enter a password', (done) => {
     request(app).post('/api/users')
     .send({
