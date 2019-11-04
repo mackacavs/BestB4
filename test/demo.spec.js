@@ -17,7 +17,7 @@ describe('Test the root path', () => {
       expect(response.statusCode).toBe(200);
       done();
     });
-    done();
+    // done();
 
   });
 

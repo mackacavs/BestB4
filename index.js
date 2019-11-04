@@ -10,7 +10,6 @@ app.use(express.json({ extended: false }))
 app.get('/', (req, res) => res.send('Hello'));
 
 if (process.env.NODE_ENV = 'test') {
-  console.log("We are here")
   mongoose.connect('mongodb://localhost/testDatabase', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -24,8 +23,9 @@ if (process.env.NODE_ENV = 'test') {
     useFindAndModify: false
   })
     .catch((err) => console.log(err));
-
 }
+
+
 
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
