@@ -43,7 +43,7 @@ describe('User is registered', () => {
   test('should return an error if new user fails to enter a name', (done) => {
     request(app).post('/api/users')
     .send({
-      email: "email12@email.com",
+      email: "email14@email.com",
       postcode: "NW5 1SD",
       password: "123456"
     })
@@ -81,16 +81,16 @@ test('should return an error if new user fails to enter a password', (done) => {
   });
 
   test('should return an error if user attempts to register twice with same email', (done) => {
-    request(app).post('/api/users')
-    .send({
-      name: "Testname",
-      email: "email12@email.com",
-      postcode: "NW5 1SD",
-      password: "123456"
-    })
-    .then((response) => {
-      done();
-    });
+    // request(app).post('/api/users')
+    // .send({
+    //   name: "Testname",
+    //   email: "email12@email.com",
+    //   postcode: "NW5 1SD",
+    //   password: "123456"
+    // })
+    // .then((response) => {
+    //   done();
+    // });
     request(app).post('/api/users')
     .send({
       name: "Testname",
