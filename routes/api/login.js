@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs');
 const express = require('express');
 const router = express.Router();
 
-
 router.post('/', [
     check('email', 'Please include a valid email').isEmail(),
     check('password', 'password is required').exists({ min: 6 })
