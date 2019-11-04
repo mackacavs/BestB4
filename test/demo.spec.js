@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 describe('Test the root path', () => {
 
   // beforeAll(() => {
-  //   mongoose.connect('mongodb://localhost/bestB4', {
+  //   mongoose.connect('mongodb://localhost/testDatabase', {
   //     useNewUrlParser: true,
   //     useUnifiedTopology: true,
   //     useFindAndModify: false

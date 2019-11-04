@@ -12,7 +12,6 @@ describe('User is registered', () => {
   //   })
   // });
   test('should create a new user', (done) => {
-    console.log("helloe")
     request(app).post('/api/users')
       .send({
         name: "Testname",
@@ -22,7 +21,7 @@ describe('User is registered', () => {
       .then((response) => {
         console.log(response.statusCode)
         console.log("I'm here")
-        expect(response.statusCode).toBe(500);
+        expect(response.statusCode).toBe(200);
         done();
       });
   });
