@@ -2,6 +2,8 @@ const request = require('supertest');
 const app = require('../index');
 const mongoose = require('mongoose');
 
+process.env.TEST_SUITE = 'demo_test';
+
 describe('Test the root path', () => {
 
   // beforeAll(() => {

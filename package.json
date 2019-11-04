@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Final Project",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "start": "node server",
     "server": "nodemon",
@@ -36,9 +39,5 @@
     "nodemon": "^1.19.4",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }
-
