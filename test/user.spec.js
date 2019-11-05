@@ -2,6 +2,16 @@ const request = require('supertest');
 const app = require('../index');
 const mongoose = require('mongoose');
 
+// async
+function removeAllCollections () {
+  const collections = Object.keys(mongoose.connection.collections)
+  for (const collectionName of collections) {
+    const collection = mongoose.connection.collections[collectionName]
+    // await
+    collection.deleteMany()
+  }
+}
+
 describe('User is registered', () => {
 
   // beforeEach(() => {
@@ -150,9 +160,15 @@ process.env.TEST_SUITE = 'register_twice';
   // });
 
   afterEach(function(done) {
+    // Added this line to replace afterEach async:
+    removeAllCollections()
     mongoose.disconnect();
     return done();
   });
+
+  // afterEach(async () => {
+  //   await removeAllCollections()
+  // })
 
   afterAll(done => {
     return done();
