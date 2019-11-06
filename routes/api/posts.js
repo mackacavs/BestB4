@@ -2,19 +2,30 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const auth = require('../../middleware/auth');
-const Post = require('../../models/Post')
+const Post = require('../../models/Post');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/ '});
 
-router.post('/', [auth, [
-  check('description', 'Description is required')
-    .not()
-    .isEmpty(),
-  check('expiry', 'Expiry is required')
-    .not()
-    .isEmpty()
-]
+
+// router.post('/', function(req, res, next){
+//   console.log(req)
+// })
+
+router.post('/',  [auth//, [
+//   check('description', 'Description is required')
+//     .not()
+//     .isEmpty(),
+//   check('expiry', 'Expiry is required')
+//     .not()
+//     .isEmpty(),
+// ],
 ],
   async (req, res) => {
+    console.log(req.files)
+    const formBody = JSON.parse(req.files.document.data.toString());
+    console.log(formBody)
     const errors = validationResult(req)
+
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
     }
@@ -22,8 +33,8 @@ router.post('/', [auth, [
       const user = await User.findById(req.user.id).select('-password')
       console.log(user)
       const newPost = new Post({
-        description: req.body.description,
-        expiry: req.body.expiry,
+        description: formBody.description,
+        expiry: formBody.expiry,
         name: user.name,
         postcode: user.postcode,
         avatar: user.avatar,
@@ -104,21 +115,21 @@ router.delete('/:id', auth, async (req, res) => {
 })
 // file upload
 
-router.post('/:id',  async (req, res) => {
-  if(req.files === null) {
-    return res.status(400).json({ msg: 'No file uploaded'});
-  }
-
-  const file = req.files.file;
-
-  file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
-    if(err){
-      console.error(err);
-      return res.status(500).send(err);
-    }
-
-    res.json({ fileName: file.name, filePath: `/uploads/${file.name}`});
-  });
-)}
+// router.post('/:id',  async (req, res) => {
+//   if(req.files === null) {
+//     return res.status(400).json({ msg: 'No file uploaded'});
+//   }
+//
+//   const file = req.files.file;
+//
+//   file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
+//     if(err){
+//       console.error(err);
+//       return res.status(500).send(err);
+//     }
+//
+//     res.json({ fileName: file.name, filePath: `/uploads/${file.name}`});
+//   });
+// )}
 
 module.exports = router;
