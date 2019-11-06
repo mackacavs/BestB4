@@ -21,7 +21,7 @@ router.post('/', [auth, [
         message: req.body.message,
         name: user.name,
         user: req.user.id,
-        recipient: req.body.id
+        recipient: req.body.recipient
       });
       const message = await newMessage.save()
       res.json(message)
