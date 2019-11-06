@@ -1,4 +1,4 @@
-{
+{ 
   "name": "bestb4",
   "version": "1.0.0",
   "description": "Final Project",
@@ -22,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "config": "^3.2.4",
     "express": "^4.17.1",
+    "express-fileupload": "^1.1.6-alpha.6",
     "express-validator": "^6.2.0",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",

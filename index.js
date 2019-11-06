@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
 const app = express();
 // const PORT = process.env.PORT || 5000
 
-app.use(express.json({ extended: false }))
+app.use(express.json({ extended: false }),fileUpload())
 
 // app.listen(PORT, () => console.log('Server has started'));
 
