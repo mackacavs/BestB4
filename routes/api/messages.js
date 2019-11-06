@@ -27,10 +27,25 @@ router.post('/', [auth, [
       res.json(message)
     } catch (err) {
       console.log(err.message)
-      res.status(500).send('Server Error')
+      res.status(500).send('Server Errors')
     }
   }
 )
+
+
+router.get('/', auth, async (req, res) => {
+  try {
+    currentUser = req.user.id
+    console.log(currentUser)
+    const messages = await Message.find({recipient: req.user.id}).sort({ date: -1 })
+    res.json(messages)
+  } catch (err) {
+    console.log(err.message)
+    res.status(500).send("server error")
+  }
+})
+
+
 
 
 module.exports = router;
