@@ -23,11 +23,9 @@ As well as allowing users to list their own food to give away and find available
 
 1.3 billion tones of food gets lost or wasted every year we wanted to help reduce that.
 
-### Screenshots
+### Homepage
 
 ![Alt text](/Images/Homepage.png?raw=true "Home Page")
-![Alt text](/Images/Sign Up Page.png?raw=true "Sign Up Page")
-
 
 ### Tech Stack
 
