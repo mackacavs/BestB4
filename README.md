@@ -25,7 +25,7 @@ As well as allowing users to list their own food to give away and find available
 
 ### Screenshots
 
-![Alt text](/BestB4/Images/Homepage.png?raw=true "Home Page")
+![Alt text](/Images/Homepage.png?raw=true "Home Page")
 
 
 
