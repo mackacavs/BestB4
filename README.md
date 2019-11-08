@@ -26,9 +26,10 @@ As well as allowing users to list their own food to give away and find available
 ### Screenshots
 
 ![Alt text](/Images/Homepage.png?raw=true "Home Page")
-
-
-
+![Alt text](/Images/Sign Up Page.png?raw=true "Sign Up Page")
+![Alt text](/Images/User Profile recipie sugestions and maps Integration.png?raw=true "Recipe and Maps Page")
+![Alt text](/Images/User Profile view whats available in the local area.png?raw=true "Whats available locally")
+![Alt text](/Images/User Profile with Users own listings.png?raw=true "Users own listings")
 
 ### Tech Stack
 
