@@ -85,13 +85,29 @@ An example of a model
 
 ### Logging in and Tracking Users
 * Bcrypt
-  * All of our passwords where validated with bcrypt when the user first registered and then we then used *bcrypt.compare* in order to check passwords where users logged in
+  * All of our passwords were validated with bcrypt when the user first registered and then we then used *bcrypt.compare* in order to check passwords where users logged in
 * Express-validator
   * Express-validator is a simple node package that allows for checking of form data. We used it to check if the user had entered in the correct-length password as well as a valid email
 * JSONWebTokens
   * JSONWebTokens track users at the front end to see whether they are logged in or not. It also allows you to make checks in your server - the user can only post if they're logged in and they can't attempt to log in/sign up if they're already logged in
 * Gravatar
   * Every time a user registered they were automatically assigned a gravatar profile picture. If they'd signed up to gravatar they'd get their own picture, otherwise they'd be given the standard default picture
+
+<img src="Images/Logging_In/bcrypt.png" width="400px">
+
+Every time the user registers their password is encrypted - it's then saved to the database
+
+<img src="Images/Logging_In/jwt.png" width="400px">
+
+We created custom middleware that always ran when a user tried to perform an action that they needed to be signed in for. Their individual user object is then returned 
+
+<img src="Images/Logging_In/jwt_signup.png" width="400px">
+
+here the user gets their token when they sign in
+
+<img src="Images/Logging_In/validation.png" width="400px">
+
+We used *express-validator* for our validation. It checks to see if the user has entered in the correct information. If they haven't an array is returned that can be used in the front end to tell the user what information is missing
 
 ### Our Controller
 * Express
