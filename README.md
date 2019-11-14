@@ -55,11 +55,23 @@ So I can see what items are available in my area
 I can see items near my location on Google Maps
 ```
 
-As well as allowing users to list their own food to give away and find available in their local area there is also a link to Google Maps so people know exactly where to go to pick up their free food.  There's even recipe sugestions based on the ingredients based in your local area.
+### Installation
 
-### Motivation
+### Back-end
+* Git Clone the current repository into a local directory of your choice
+* Run NPM Install in order to install the necassary modules to run the application
+* Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
 
-1.3 billion tones of food gets lost or wasted every year we wanted to help reduce that.
+### Front-end
+* Git Clone this repository into a local directory of your choice
+* Run NPM Install in order to install the necassary modules to run the application
+* Enter *npm run start* in order to host the React front-end - 
+
+### Technologies Used
+
+```
+Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end
+```
 
 ### Homepage
 
@@ -67,7 +79,10 @@ As well as allowing users to list their own food to give away and find available
 
 ### Tech Stack
 
-Mongo <br>
+
+### Storing Data
+* Mongo
+    * 
 Express <br>
 React <br>
 Node <br>
@@ -140,6 +155,11 @@ To run front end repository
 ```
 npm run start
 ```
+
+### Homepage
+
+![Alt text](/Images/Homepage.png?raw=true "Home Page")
+
 
 You can now view in your browser of choice by visiting:
 
