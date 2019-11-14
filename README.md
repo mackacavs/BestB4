@@ -69,9 +69,8 @@ I can see items near my location on Google Maps
 
 ### Technologies Used
 
-```
-Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end
-```
+
+*Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end*
 
 ### Homepage
 
