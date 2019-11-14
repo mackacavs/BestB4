@@ -55,7 +55,7 @@ So I can see what items are available in my area
 I can see items near my location on Google Maps
 ```
 
-### Installation
+## Installation
 
 ### Back-end
 * Git Clone the current repository into a local directory of your choice
@@ -67,12 +67,12 @@ I can see items near my location on Google Maps
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *npm run start* in order to host the React front-end - 
 
-### Technologies Used
+## Technologies Used
 
 *Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end*
 
 
-#### Storing Data
+### Storing Data
 * Mongo
     * 
 Express <br>
