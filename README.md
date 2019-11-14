@@ -95,15 +95,15 @@ I can see items near my location on Google Maps
 * Insomnia
   * We needed to continuously check that our routes were firstly working and secondly giving back the data that we expected - we used insomnia to do this
 
-<img src="images/Insomnia/Register.png?" width="400px">
+<img src="images/Insomnia/Register.png" width="400px">
 
 Here a test user registers - they get back a token that has been generated with JWTokens
 
-<img src="images/Insomnia/Post.png?" width="400px">
+<img src="images/Insomnia/Post.png" width="400px">
 
 And now the user posts - notice they get back the post object that can be used as neccassary throughout the application
 
-<img src="images/Insomnia/Token.png?" width="400px">
+<img src="images/Insomnia/Token.png" width="400px">
 
 Finally, here's a shot of when the user posts. The application checks for the token prior to allowing the user to post
 
