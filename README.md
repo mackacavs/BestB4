@@ -55,10 +55,12 @@ So I can see what items are available in my area
 I can see items near my location on Google Maps
 ```
 
+## Tech Stack
+
 *After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we built our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end.*
+
 ## Installation
 
-### Back-end
 * Git Clone the current repository into a local directory of your choice
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
@@ -67,7 +69,7 @@ I can see items near my location on Google Maps
 
 ### Storing Data
 * Mongo
-  * adfsdf
+  * We used mongo as our back-end
 Express <br>
 React <br>
 Node <br>
