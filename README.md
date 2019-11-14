@@ -37,6 +37,14 @@ I can add my gravatar profile picture
 As a user
 So I can find food available in my local area
 I can see a list of food in my area
+
+As a user
+So I can contact my fellow users
+I want to be able to send them a message
+
+As a user
+So I can remove food from the application if it's been eaten/used
+I want to be able to delete my own food items from the website
 ```
 
 After having achieved our primary targets - we moved onto more ambitious ones - connecting our application to external API's. Firstly we used the Spoonacular API to allow users to see recipes based on what was in their own fridge as well as being given away by users in their local area-
@@ -87,7 +95,19 @@ I can see items near my location on Google Maps
 * Insomnia
   * We needed to continuously check that our routes were firstly working and secondly giving back the data that we expected - we used insomnia to do this
 
-### Screenshots
+<img src="images/Register.png?" width="400px">
+
+Here a test user registers - they get back a token that has been generated with JWTokens
+
+<img src="images/Post.png?" width="400px">
+
+And now the user posts - notice they get back the post object that can be used as neccassary throughout the application
+
+<img src="images/Token.png?" width="400px">
+
+Finally, here's a shot of when the user posts. The application checks for the token prior to allowing the user to post
+
+## Screenshots
 
 <img src="images/plane_class.png?" width="400px">
 
@@ -105,20 +125,6 @@ The test spec for the airport class
 
 14/14 passing tests
 
-
-
-React <br>
-Node <br>
-Cypress <br>
-Jest <br>
-Insomnia (https://insomnia.rest/) <br>
-Java Script <br>
-Google API <br>
-Spoonacular API <br>
-Redux <br>
-Balsimiq <br>
-Trello <br>
-
 ## Installation
 
 * Git Clone the current repository into a local directory of your choice
@@ -126,112 +132,6 @@ Trello <br>
 * Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
 
 ### Features
-
-List food to give away.
-Delete food from your inventory when you have given it away or it has passed it's expiry date. <br>
-Find food in your local area that people are giving away. <br>
-Contact a user who is listing food you want. <br>
-Get directions collect food via a Google API. <br>
-Get recipe sugestions based on what ingredients are available in your local area vis a Spoonacular API <br>
-
-
-### Installation
-
-```bash
-npm install
-```
-
-### Tests
-
-#### How to run front end feature tests
-
-1. Run back end server (from backend directory) <br>
-
-$ BestB4 <br>
-
-```
-node server.js
-
-```
-2. Run front end server (from front end directory) <br>
-
-$ client <br>
-
-```
-npm run start
-
-```
-
-3. Run Cypress (from front end directory)
-
-$ Client
-
-```
-node_modules/.bin/cypress open
-```
-
-The Cypress UI will then open automatically and you will see a list of feature tests that can be run.
-
-### How to use
-
-To run back end repository.
-```bash
-node server.js
-```
-
-To run front end repository
-```
-npm run start
-```
-
-### Homepage
-
-![Alt text](/Images/Homepage.png?raw=true "Home Page")
-
-
-You can now view in your browser of choice by visiting:
-
-http://localhost:3000/
-
-#### User Stories
-
-As a user <br>
-So I can find unwanted food <br>
-I can view a list of available food <br>
-
-As a user <br>
-So I can access my account <br>
-I can log in <br>
-
-As a user <br>
-So I can create an account <br>
-I can sign up <br>
-
-As a user <br>
-So I can give away food I won't use <br>
-I can list a food item <br>
-
-As a user <br>
-So people can see who I am <br>
-I can add my gravatar profile picture <br>
-
-As a user <br>
-So I can find food available in my local area <br>
-I can see a list of food in my area <br>
-
-As a user <br>
-So I can see what items are available in my area <br>
-I can see items near my location on Google Maps <br>
-
-As a user <br>
-So I can receive recipe ideas based on food items in my area <br>
-I can view a recipe suggestions <br>
-
-
-### Front End Repository
-asdasd
-The front end repository for this project is available at: <br>
-https://github.com/eashworth/bestB4-Front-End/branches <br>
 
 
 ### Front-end
