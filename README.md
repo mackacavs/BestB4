@@ -66,18 +66,24 @@ I can see items near my location on Google Maps
   * We used mongo as our back-end. This decision was taken early on in order to fufill our goal of using the MERN stack
 * Mongoose
   * In order to interact with Mongo in express we had to use mongoose. Mongoose allows for simple and easy communication between your database where information is stored and you server where information is recieved from the front-end
+
+### Logging in and Tracking Users
 * Bcrypt
   * All of our passwords where validated with bcrypt when the user first registered and then we then used *bcrypt.compare* in order to check passwords where users logged in
 * Express-validator
   * Express-validator is a simple node package that allows for checking of form data. We used it to check if the user had entered in the correct-length password as well as a valid email
 * JSONWebTokens
   * JSONWebTokens track users at the front end to see whether they are logged in or not. It also allows you to make checks in your server - the user can only post if they're logged in and they can't attempt to log in/sign up if they're already logged in
-* Express
-  * We used express as our server - this handled both our request and our response
 * Gravatar
   * Every time a user registered they were automatically assigned a gravatar profile picture. If they'd signed up to gravatar they'd get their own picture, otherwise they'd be given the standard default picture
+
+### Our Controller
+* Express
+  * We used express as our server - this handled both our request and our response
 * express.Router()
   * express.Router() makes our code cleaner by allowing us to groups routes into seperate files
+
+### Testing Routes
 * Insomnia
   * We needed to continuously check that our routes were firstly working and secondly giving back the data that we expected - we used insomnia to do this
 
