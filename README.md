@@ -75,6 +75,14 @@ I can see items near my location on Google Maps
 * Mongoose
   * In order to interact with Mongo in express we had to use mongoose. Mongoose allows for simple and easy communication between your database where information is stored and you server where information is recieved from the front-end
 
+<img src="Images/Mongo/mongo_db.png" width="400px">
+
+We checked that users had been entered into our database correctly in the terminal
+
+<img src="Images/Mongo/post_model.png" width="400px">
+
+An example of a model
+
 ### Logging in and Tracking Users
 * Bcrypt
   * All of our passwords where validated with bcrypt when the user first registered and then we then used *bcrypt.compare* in order to check passwords where users logged in
