@@ -55,6 +55,8 @@ So I can see what items are available in my area
 I can see items near my location on Google Maps
 ```
 
+After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we build our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end
+
 ## Installation
 
 ### Back-end
@@ -62,17 +64,7 @@ I can see items near my location on Google Maps
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
 
-### Front-end
-* Git Clone this repository into a local directory of your choice
-* Run NPM Install in order to install the necassary modules to run the application
-* Enter *npm run start* in order to host the React front-end - 
-
-After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we build our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end
-
 ## Technologies Used
-
-After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. 
-*Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end*
 
 ### Storing Data
 * Mongo
@@ -198,3 +190,9 @@ I can view a recipe suggestions <br>
 asdasd
 The front end repository for this project is available at: <br>
 https://github.com/eashworth/bestB4-Front-End/branches <br>
+
+
+### Front-end
+* Git Clone this repository into a local directory of your choice
+* Run NPM Install in order to install the necassary modules to run the application
+* Enter *npm run start* in order to host the React front-end - 
