@@ -67,10 +67,12 @@ I can see items near my location on Google Maps
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *npm run start* in order to host the React front-end - 
 
+After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we build our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end
+
 ## Technologies Used
 
+After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. 
 *Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end*
-
 
 ### Storing Data
 * Mongo
