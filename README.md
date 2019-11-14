@@ -111,7 +111,7 @@ Finally, here's a shot of when the user posts. The application checks for the to
 
 <img src="images/plane_class.png?" width="400px">
 
-A screenshot of the plane class - notice how the plane class holds the 'land' method
+A screenshot of the plane class - notice how the plane class holds the 'land' methodsss
 
 <img src="images/weather_class.png?" width="400px">
 
