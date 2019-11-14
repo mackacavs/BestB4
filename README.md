@@ -59,18 +59,48 @@ I can see items near my location on Google Maps
 
 *After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we built our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end.*
 
-## Installation
-
-* Git Clone the current repository into a local directory of your choice
-* Run NPM Install in order to install the necassary modules to run the application
-* Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
-
 ## Technologies Used
 
 ### Storing Data
 * Mongo
-  * We used mongo as our back-end
-Express <br>
+  * We used mongo as our back-end. This decision was taken early on in order to fufill our goal of using the MERN stack
+* Mongoose
+  * In order to interact with Mongo in express we had to use mongoose. Mongoose allows for simple and easy communication between your database where information is stored and you server where information is recieved from the front-end
+* Bcrypt
+  * All of our passwords where validated with bcrypt when the user first registered and then we then used *bcrypt.compare* in order to check passwords where users logged in
+* Express-validator
+  * Express-validator is a simple node package that allows for checking of form data. We used it to check if the user had entered in the correct-length password as well as a valid email
+* JSONWebTokens
+  * JSONWebTokens track users at the front end to see whether they are logged in or not. It also allows you to make checks in your server - the user can only post if they're logged in and they can't attempt to log in/sign up if they're already logged in
+* Express
+  * We used express as our server - this handled both our request and our response
+* Gravatar
+  * Every time a user registered they were automatically assigned a gravatar profile picture. If they'd signed up to gravatar they'd get their own picture, otherwise they'd be given the standard default picture
+* express.Router()
+  * express.Router() makes our code cleaner by allowing us to groups routes into seperate files
+* Insomnia
+  * We needed to continuously check that our routes were firstly working and secondly giving back the data that we expected - we used insomnia to do this
+
+### Screenshots
+
+<img src="images/plane_class.png?" width="400px">
+
+A screenshot of the plane class - notice how the plane class holds the 'land' method
+
+<img src="images/weather_class.png?" width="400px">
+
+An weather class with an SRP - return a random weather variable
+
+<img src="images/tests.png?" width="400px">
+
+The test spec for the airport class
+
+<img src="images/14_passing_tests.png?" width="400px">
+
+14/14 passing tests
+
+
+
 React <br>
 Node <br>
 Cypress <br>
@@ -83,6 +113,11 @@ Redux <br>
 Balsimiq <br>
 Trello <br>
 
+## Installation
+
+* Git Clone the current repository into a local directory of your choice
+* Run NPM Install in order to install the necassary modules to run the application
+* Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
 
 ### Features
 
