@@ -115,6 +115,15 @@ We used *express-validator* for our validation. It checks to see if the user has
 * express.Router()
   * express.Router() makes our code cleaner by allowing us to groups routes into seperate files
 
+<img src="Images/Express/express.png" width="400px">
+
+An exmaple of our routes - they were fully consumed by a restful API
+
+<img src="Images/Express/router.png" width="400px">
+
+We used different files for different routes (users, posts, messages)
+
+
 ### Testing Routes
 * Insomnia
   * We needed to continuously check that our routes were firstly working and secondly giving back the data that we expected - we used insomnia to do this
@@ -131,32 +140,11 @@ And now the user posts - notice they get back the post object that can be used a
 
 Finally, here's a shot of when the user posts. The application checks for the token prior to allowing the user to post
 
-## Screenshots
-
-<img src="images/plane_class.png?" width="400px">
-
-A screenshot of the plane class - notice how the plane class holds the 'land' methodsss
-
-<img src="images/weather_class.png?" width="400px">
-
-An weather class with an SRP - return a random weather variable
-
-<img src="images/tests.png?" width="400px">
-
-The test spec for the airport class
-
-<img src="images/14_passing_tests.png?" width="400px">
-
-14/14 passing tests
-
 ## Installation
 
 * Git Clone the current repository into a local directory of your choice
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
-
-### Features
-
 
 ### Front-end
 * Git Clone this repository into a local directory of your choice
