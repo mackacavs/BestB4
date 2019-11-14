@@ -145,8 +145,3 @@ Finally, here's a shot of when the user posts. The application checks for the to
 * Git Clone the current repository into a local directory of your choice
 * Run NPM Install in order to install the necassary modules to run the application
 * Enter *node server.js* in order to run the backend server locally - this will be hosted on port 5000
-
-### Front-end
-* Git Clone this repository into a local directory of your choice
-* Run NPM Install in order to install the necassary modules to run the application
-* Enter *npm run start* in order to host the React front-end - 
