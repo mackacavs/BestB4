@@ -69,17 +69,10 @@ I can see items near my location on Google Maps
 
 ### Technologies Used
 
-
 *Please note the following is a run-down of technologies used in our back-end - please go to this repository for details on a breakdown of the front-end*
 
-### Homepage
 
-![Alt text](/Images/Homepage.png?raw=true "Home Page")
-
-### Tech Stack
-
-
-### Storing Data
+#### Storing Data
 * Mongo
     * 
 Express <br>
