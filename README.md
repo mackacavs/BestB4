@@ -55,8 +55,7 @@ So I can see what items are available in my area
 I can see items near my location on Google Maps
 ```
 
-After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we build our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end
-
+*After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we built our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end.*
 ## Installation
 
 ### Back-end
