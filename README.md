@@ -8,14 +8,52 @@
            \.,_____________,./
 
 
-### Front End Repository
-asdasd
-The front end repository for this project is available at: <br>
-https://github.com/eashworth/bestB4-Front-End/branches <br>
 
 ### Project Description
 
-A final project by Eithel, Elsie, Jules, Mackenzie and Valeria.  BestB4 is a website to helps the world waste less food by allowing people to easily give away food they wont use to other people in their local community.
+As our final project at Makers Academy - team BestB4 consisting of Eithel, Elsie, Jules, Mackenzie and Valeria had the challenge of changing the world in 8 days.  We came up with this - a website to help people waste less food by allowing users to easily give away food they won't use - or food that's about to expire - to other people in their local community. Here's our tasks based down into user stories-
+
+```
+As a user
+So I can find unwanted food
+I can view a list of available food
+
+As a user
+So I can access my account
+I can log in
+
+As a user
+So I can create an account
+I can sign up
+
+As a user
+So I can give away food I won't use
+I can list a food item
+
+As a user
+So people can see who I am
+I can add my gravatar profile picture
+
+As a user
+So I can find food available in my local area
+I can see a list of food in my area
+```
+
+After having achieved our primary targets - we moved onto more ambitious ones - connecting our application to external API's. Firstly we used the Spoonacular API to allow users to see recipes based on what was in their own fridge as well as being given away by users in their local area-
+
+```
+As a user
+So I can receive recipe ideas based on food items in my area
+I can view a recipe suggestions
+```
+
+Once this goal had been attained we moved onto our final stretch goal - to allow users to see where their othe food was located. We did this using the google Maps API-
+
+```
+As a user
+So I can see what items are available in my area
+I can see items near my location on Google Maps
+```
 
 As well as allowing users to list their own food to give away and find available in their local area there is also a link to Google Maps so people know exactly where to go to pick up their free food.  There's even recipe sugestions based on the ingredients based in your local area.
 
@@ -140,3 +178,9 @@ I can see items near my location on Google Maps <br>
 As a user <br>
 So I can receive recipe ideas based on food items in my area <br>
 I can view a recipe suggestions <br>
+
+
+### Front End Repository
+asdasd
+The front end repository for this project is available at: <br>
+https://github.com/eashworth/bestB4-Front-End/branches <br>
