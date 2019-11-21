@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-// const PORT = process.env.PORT || 5000
 
 app.use(express.json({ extended: false }))
 
@@ -31,9 +30,4 @@ app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/login', require('./routes/api/login'));
 app.use('/api/messages', require('./routes/api/messages'));
 
-
 module.exports = app
-
-  // .then(() => {
-  // console.log("We have connected")
-  // })

@@ -1,7 +1,7 @@
 const config = require('config');
 const express = require('express');
 const router = express.Router();
-const { check, validationResult } = require('express-validator/check')
+const { check, validationResult } = require('express-validator')
 const User = require('../../models/User');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
@@ -34,7 +34,6 @@ router.post('/', [
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
       await user.save();
-      console.log(user)
       const payload = {
         user: {
           id: user.id

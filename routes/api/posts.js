@@ -20,7 +20,6 @@ router.post('/', [auth, [
     }
     try {
       const user = await User.findById(req.user.id).select('-password')
-      console.log(user)
       const newPost = new Post({
         description: req.body.description,
         expiry: req.body.expiry,
@@ -30,7 +29,6 @@ router.post('/', [auth, [
         user: req.user.id
       });
       const post = await newPost.save()
-      console.log(post)
       res.json(post)
     } catch (err) {
       console.log(err.message)
