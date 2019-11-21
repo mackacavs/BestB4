@@ -11,7 +11,7 @@
 
 ### Project Description
 
-As our final project at Makers Academy - team BestB4 consisting of Eithel, Elsie, Jules, Mackenzie and Valeria had the challenge of changing the world in 8 days.  We came up with this - a website to help people waste less food by allowing users to easily give away food they won't use - or food that's about to expire - to other people in their local community. Here's our tasks based down into user stories-
+As our final project at Makers Academy - team BestB4 consisting of Eithel, Elsie, Jules, Mackenzie and Valeria had the challenge of changing the world in 8 days.  We came up with this - a website to help people waste less food by allowing users to easily give away food they won't use - or food that's about to expire - to other people in their local community. Here's our tasks broken down into user stories-
 
 ```
 As a user
@@ -65,7 +65,7 @@ I can see items near my location on Google Maps
 
 ## Tech Stack
 
-*After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we built our Mongo and Express backend. Please go here(link) to download and view more information on our React front-end.*
+*After much deliberation at the start of the project we decided to use the MERN stack - Mongo, Express, React and Node in order to create our application. You're currently viewing our backend and the rest of this readme will be focussed on how we built our Mongo and Express backend.*
 
 ## Technologies Used
 
