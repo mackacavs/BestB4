@@ -51,7 +51,6 @@ router.get('/', auth, async (req, res) => {
 
 router.get('/currentuser', auth, async (req, res) => {
   try {
-    console.log(req.user)
     const posts = await Post.find({ user: req.user.id }).sort({ date: -1 })
     res.json(posts)
   } catch (err) {
